@@ -1,0 +1,10 @@
+name = "virtuale-notion"
+main = "index.js"
+compatibility_date = "2026-01-01"
+
+[vars]
+NOTION_CLIENT_ID = ""
+REDIRECT_URI = "https://virtuale-notion.<tuo-subdomain>.workers.dev/callback"
+EXT_REDIRECT = "https://<extension-id>.chromiumapp.org/notion"
+
+# NOTION_CLIENT_SECRET va impostato con: wrangler secret put NOTION_CLIENT_SECRET

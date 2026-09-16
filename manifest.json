@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Virtuale → Notion",
+  "version": "0.1.0",
+  "description": "Replica i documenti di un corso Virtuale (Moodle) in un database Notion. Non affiliato all'Università di Bologna.",
+  "permissions": ["storage", "identity"],
+  "host_permissions": [
+    "https://virtuale.unibo.it/*",
+    "https://api.notion.com/*"
+  ],
+  "background": {
+    "service_worker": "src/sw.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://virtuale.unibo.it/course/view.php*"],
+      "js": ["src/content.js"]
+    }
+  ],
+  "action": {
+    "default_title": "Virtuale → Notion",
+    "default_popup": "src/popup.html"
+  }
+}

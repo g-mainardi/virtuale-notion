@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        font: 13px/1.5 system-ui, sans-serif;
+        width: 320px;
+        margin: 0;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 14px;
+        margin: 0 0 10px;
+      }
+      fieldset {
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        margin: 0 0 10px;
+        padding: 8px;
+      }
+      legend {
+        color: #666;
+        padding: 0 4px;
+      }
+      input,
+      button {
+        font: inherit;
+        box-sizing: border-box;
+        width: 100%;
+        margin-top: 6px;
+        padding: 6px;
+      }
+      input[type='number'] {
+        width: 80px;
+      }
+      button {
+        cursor: pointer;
+      }
+      #msg {
+        color: #555;
+        min-height: 1.5em;
+      }
+      .err {
+        color: #b00;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Virtuale → Notion</h1>
+
+    <fieldset>
+      <legend>1 · Notion</legend>
+      <div id="account">non collegato</div>
+      <button id="login">Collega Notion</button>
+      <input id="token" type="password" placeholder="oppure incolla un token interno" />
+    </fieldset>
+
+    <fieldset>
+      <legend>2 · Database</legend>
+      <div id="db">nessun database</div>
+      <input id="page" type="url" placeholder="URL della pagina Notion padre" />
+      <button id="create">Crea database</button>
+    </fieldset>
+
+    <fieldset>
+      <legend>3 · Allegati</legend>
+      <label>max MB per file <input id="max" type="number" min="0" step="1" /></label>
+    </fieldset>
+
+    <div id="msg"></div>
+    <script src="popup.js" type="module"></script>
+  </body>
+</html>
